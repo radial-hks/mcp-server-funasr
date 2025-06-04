@@ -56,11 +56,13 @@ The server is designed to be extensible and allows for dynamic loading and switc
 1.  **Navigate to the `MCPServer` directory.**
 2.  **Run the server application:**
     ```bash
-    python server.py
+    uvicorn main:app --host 0.0.0.0 --port 9000
     ```
-3.  The server will start, and you should see log output indicating it's running, typically on `http://0.0.0.0:8000`. On the first run, FunASR will download the default ASR and VAD models, which may take some time.
+3.  The server will start, and you should see log output indicating it's running, typically on `http://0.0.0.0:9000`. On the first run, FunASR will download the default ASR and VAD models, which may take some time.
 
 ## Available MCP Tools
+
+> MCPServer: http://0.0.0.0:9000/sse 
 
 You can interact with these tools using any MCP client (e.g., `mcp_client` or via HTTP requests). The server provides the following tools:
 
